@@ -1,0 +1,11 @@
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\bin\Debug\net5.0\Byndyusoft.ValidEnumConverter.deps.json
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\bin\Debug\net5.0\Byndyusoft.ValidEnumConverter.dll
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\bin\Debug\net5.0\ref\Byndyusoft.ValidEnumConverter.dll
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\bin\Debug\net5.0\Byndyusoft.ValidEnumConverter.pdb
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.AssemblyInfo.cs
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.dll
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\ref\Byndyusoft.ValidEnumConverter.dll
+C:\Users\admin\source\repos\Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter\obj\Debug\net5.0\Byndyusoft.ValidEnumConverter.pdb

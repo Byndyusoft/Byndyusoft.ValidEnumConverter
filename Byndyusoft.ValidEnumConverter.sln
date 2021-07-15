@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byndyusoft.ValidEnumConverter", "Byndyusoft.ValidEnumConverter\Byndyusoft.ValidEnumConverter.csproj", "{90A5B76D-A335-40DC-81DA-DDECFDE94501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90A5B76D-A335-40DC-81DA-DDECFDE94501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A5B76D-A335-40DC-81DA-DDECFDE94501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A5B76D-A335-40DC-81DA-DDECFDE94501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A5B76D-A335-40DC-81DA-DDECFDE94501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A9836CC-733C-401F-96F8-D26C0EEF9554}
+	EndGlobalSection
+EndGlobal
