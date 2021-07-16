@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Authors>Byndyusoft</Authors>
   </PropertyGroup>
-
+  <Version>1.0.1<\/Version>
   <ItemGroup>
     <Compile Remove="Decorators\**" />
     <EmbeddedResource Remove="Decorators\**" />
