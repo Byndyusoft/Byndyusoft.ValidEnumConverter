@@ -70,14 +70,6 @@ Make sure you have installed all of the following prerequisites on your developm
 - Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
 - .NET 3.1
 
-## General folders layout
-
-### src
-- source code
-
-### tests
-- unit-tests
-
 
 ## Package development lifecycle
 
