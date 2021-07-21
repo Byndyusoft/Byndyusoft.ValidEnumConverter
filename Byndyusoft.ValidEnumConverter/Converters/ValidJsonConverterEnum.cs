@@ -4,14 +4,14 @@
     using System.Text.Json;
     using System.Text.Json.Serialization;
 
-    public class JsonCustomConverterEnum<T> : JsonConverter<T>
+    public class ValidJsonConverterEnum<T> : JsonConverter<T>
             where T : struct, Enum
     {
-        private JsonConverter<T> _jsonConverter;
+        private readonly JsonConverter<T> _defaultJsonConverter;
 
-        public JsonCustomConverterEnum(JsonConverter<T> defaultConverter)
+        public ValidJsonConverterEnum(JsonConverter<T> defaultConverter)
         {
-            _jsonConverter = defaultConverter;
+            _defaultJsonConverter = defaultConverter;
         }
 
         private int? GetNumber(Utf8JsonReader reader)
@@ -39,27 +39,17 @@
         {
             var number = GetNumber(reader);
 
-            if (!number.HasValue)
-            {
-                var enumString = reader.GetString();
-                if (!Enum.TryParse(enumString, out T _)
-                    && !Enum.TryParse(enumString, ignoreCase: true, out T _))
-                {
-                    throw new JsonException();
-                }
-            }
-
-            if (number.HasValue && !Enum.IsDefined(typeof(T), number))
+            if (number != null && !Enum.IsDefined(typeof(T), number))
             {
                 throw new JsonException();
             }
 
-            return _jsonConverter.Read(ref reader, typeToConvert, options);
+            return _defaultJsonConverter.Read(ref reader, typeToConvert, options);
         }
 
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
-            _jsonConverter.Write(writer, value, options);
+            _defaultJsonConverter.Write(writer, value, options);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace FrontOfficeApi.Converters.CustomConverterFactory
+﻿using System.Collections.Generic;
+
+namespace FrontOfficeApi.Converters.CustomConverterFactory
 {
     using System;
     using System.Reflection;
@@ -6,11 +8,11 @@
     using System.Text.Json.Serialization;
     using CustomConverters;
 
-    public class JsonCustomConverterFactory : JsonConverterFactory
+    public class ValidJsonConverterFactory : JsonConverterFactory
     {
         private readonly JsonConverterFactory _innerFactory;
 
-        public JsonCustomConverterFactory(JsonConverterFactory innerFactory)
+        public ValidJsonConverterFactory(JsonConverterFactory innerFactory)
         {
             _innerFactory = innerFactory ?? throw new ArgumentNullException(nameof(innerFactory));
         }
@@ -26,7 +28,7 @@
             var defaultConverter = jsonStringEnumConverter.CreateConverter(typeToConvert, options);
 
             var converter = (JsonConverter) Activator.CreateInstance(
-                    typeof(JsonCustomConverterEnum<>).MakeGenericType(typeToConvert),
+                    typeof(ValidJsonConverterEnum<>).MakeGenericType(typeToConvert),
                     BindingFlags.Instance | BindingFlags.Public,
                     null,
                     new object[] {defaultConverter},
