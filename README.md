@@ -1,6 +1,6 @@
 # Byndyusoft.ValidEnumConverter
 
-Tool for serialization with masking sensitive data
+Serialization tool with Enum datatype
 
 | | | |
 | ------- | ------------ | --------- |
