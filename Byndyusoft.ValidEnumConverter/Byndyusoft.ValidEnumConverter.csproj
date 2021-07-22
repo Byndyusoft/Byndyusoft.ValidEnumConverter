@@ -4,15 +4,5 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Authors>Byndyusoft</Authors>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <Compile Remove="Decorators\**" />
-    <EmbeddedResource Remove="Decorators\**" />
-    <None Remove="Decorators\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CustomConverters\" />
-  </ItemGroup>
 
 </Project>

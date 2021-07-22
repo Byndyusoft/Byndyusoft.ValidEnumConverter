@@ -4,7 +4,7 @@
     using System.Text.Json;
     using System.Text.Json.Serialization;
 
-    public class JsonValidEnumConverter<T> : JsonConverter<T>
+    internal class JsonValidEnumConverter<T> : JsonConverter<T>
         where T : struct, Enum
     {
         private readonly JsonConverter<T> _defaultJsonConverter;

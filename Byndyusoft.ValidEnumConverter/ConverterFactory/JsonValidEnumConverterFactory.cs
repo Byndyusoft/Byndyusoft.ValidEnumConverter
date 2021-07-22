@@ -1,18 +1,18 @@
-﻿namespace Byndyusoft.ValidEnumConverter.ConverterFactory
-{
-    using System;
-    using System.Reflection;
-    using System.Text.Json;
-    using System.Text.Json.Serialization;
-    using Converters;
+﻿using System;
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Byndyusoft.ValidEnumConverter.Converters;
 
+namespace Byndyusoft.ValidEnumConverter.ConverterFactory
+{
     public class JsonValidEnumConverterFactory : JsonConverterFactory
     {
         private readonly JsonStringEnumConverter _innerFactory;
 
-        public JsonValidEnumConverterFactory(JsonStringEnumConverter innerFactory)
+        public JsonValidEnumConverterFactory(JsonNamingPolicy namingPolicy = null, bool allowIntegerValues = true)
         {
-            _innerFactory = innerFactory ?? throw new ArgumentNullException(nameof(innerFactory));
+            _innerFactory = new JsonStringEnumConverter(namingPolicy, allowIntegerValues);
         }
 
         public override bool CanConvert(Type typeToConvert)
