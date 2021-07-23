@@ -56,6 +56,12 @@ options.JsonSerializerOptions.Converters.Add(new JsonValidEnumConverterFactory(n
 ```
 where namingPolicy and allowIntegerValues parameters are used in same way as in standard JsonStringEnumConverter.
 
+you can also use an extension called "ValidEnumConverterJsonConvertersExtensions"
+
+```csharp
+options.JsonSerializerOptions.Converters.AddValidEnumConverter();
+```
+
 After that, all Enum types are correctly converted for you.
 
 # Contributing
