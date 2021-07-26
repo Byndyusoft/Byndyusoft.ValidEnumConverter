@@ -51,12 +51,6 @@ We go to the Setup.cs of our project:
                     .AddJsonOptions (options => ...
 ```
 and add following line
-```csharp
-options.JsonSerializerOptions.Converters.Add(new JsonValidEnumConverterFactory(namingPolicy, allowIntegerValues));
-```
-where namingPolicy and allowIntegerValues parameters are used in same way as in standard JsonStringEnumConverter.
-
-you can also use an extension called "ValidEnumConverterJsonConvertersExtensions"
 
 ```csharp
 options.JsonSerializerOptions.Converters.AddValidEnumConverter();

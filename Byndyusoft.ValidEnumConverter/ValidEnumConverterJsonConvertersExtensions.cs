@@ -7,11 +7,6 @@
 
     public static class ValidEnumConverterJsonConvertersExtensions
     {
-        public static void AddValidEnumConverter(this IList<JsonConverter> converters)
-        {
-            converters.Add(new JsonValidEnumConverterFactory(new JsonStringEnumConverter(null, true )));
-        }
-
         public static void AddValidEnumConverter(
             this IList<JsonConverter> converters,
             JsonNamingPolicy? namingPolicy = null,
