@@ -1,6 +1,6 @@
 # Byndyusoft.ValidEnumConverter
 
-Serialization tool with Enum datatype
+Custom JsonConverter for enums with value validation.
 
 | | | |
 | ------- | ------------ | --------- |
@@ -45,14 +45,15 @@ The non-existent value of our UserRole, it is logical to assume that a regular v
 Therefore, we decided to make our own custom converter. Which validates the numbers in the string correctly
 
 how to use the converter
-We go to the Setup.cs of our project and then
+We go to the Setup.cs of our project:
 ```csharp
  services.AddControllers ()
                     .AddJsonOptions (options => ...
 ```
-and write the following there:
+and add following line
+
 ```csharp
-options.JsonSerializerOptions.Converters.Add (new ValidJsonConverterFactory (new JsonStringEnumConverter ()));
+options.JsonSerializerOptions.Converters.AddValidEnumConverter();
 ```
 
 After that, all Enum types are correctly converted for you.
