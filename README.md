@@ -20,25 +20,26 @@ designed to properly validate numbers in a string. The System.Text.Json.Serializ
 For example:
                    We have our own enum, let's call it UserRole:
 ```csharp
- public enum UserRole
-    {
-        Administrator = 0,
-        Agent = 1
-    }
+public enum UserRole
+{
+    Administrator = 0,
+    Agent = 1
+}
 ```
 And there is a Dto object:
 ```csharp
-         public UserInfoDto {
-                   public int Id {get; set; }
-                   public UserRole Role {get; set; }
-         }
+public UserInfoDto 
+{
+    public int Id {get; set; }
+    public UserRole Role {get; set; }
+}
 ```
 When using this Dto object in our controller as an accepted class
 On the front side, the following Json can be sent:
 ```json
 {
   "Id": 1,
-  "userRole": "589",
+  "UserRole": "589"
 }
 ```
 The non-existent value of our UserRole, it is logical to assume that a regular validator should throw an error with a code of 400, but this does not happen.
@@ -47,8 +48,8 @@ Therefore, we decided to make our own custom converter. Which validates the numb
 how to use the converter
 We go to the Setup.cs of our project:
 ```csharp
- services.AddControllers ()
-                    .AddJsonOptions (options => ...
+services.AddControllers ()
+    .AddJsonOptions (options => ...
 ```
 and add following line
 
@@ -69,7 +70,7 @@ A detailed overview on how to contribute can be found in the [contributing guide
 Make sure you have installed all of the following prerequisites on your development machine:
 
 - Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
-- .NET 3.1
+- .NET Core (version 3.1 or higher) - [Download & Install .NET Core](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 
 
 ## Package development lifecycle
